@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CloudSphere 360 - An interactive Salesforce Cloud Architecture learning experience.">
+    <title>CloudSphere 360 | Interactive Cloud Learning</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="site-header">
+            <a class="brand" href="#home">
+                <span class="brand-icon">☁</span>
+                CloudSphere <strong>360</strong>
+            </a>
+            <a class="github-link"
+               href="https://github.com/Orlando-Houston/cloudsphere360-salesforce-lwc"
+               target="_blank" rel="noopener noreferrer">
+               View Source on GitHub ↗
+            </a>
+        </header>
+
+        <main id="home">
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">SALESFORCE DEVELOPMENT PORTFOLIO</span>
+                    <h1>Explore the Cloud.<br>
+                        <span>Understand Salesforce.</span>
+                    </h1>
+                    <p>
+                        An interactive journey through cloud computing
+                        architecture, security, data, integration,
+                        monitoring and deployment.
+                    </p>
+                    <a class="explore-button" href="#explorer">
+                        Explore Architecture ↓
+                    </a>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <div class="cloud-symbol">☁</div>
+                </div>
+            </section>
+
+            <section class="stats" aria-label="Project highlights">
+                <div><strong>06</strong><span>Cloud Topics</span></div>
+                <div><strong>100%</strong><span>Interactive Learning</span></div>
+                <div><strong>LWC</strong><span>Salesforce Implementation</span></div>
+            </section>
+
+            <section id="explorer" class="explorer-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">INTERACTIVE EXPLORER</span>
+                        <h2>Cloud Architecture Learning Hub</h2>
+                        <p>Select a topic to explore its key concepts and Salesforce applications.</p>
+                    </div>
+                    <button id="resetBtn" class="reset-button" type="button">
+                        ↻ Reset Progress
+                    </button>
+                </div>
+
+                <div class="progress-panel">
+                    <div class="progress-label">
+                        <strong>Learning Progress</strong>
+                        <span id="progressText">0% Completed · 0 of 6 topics</span>
+                    </div>
+                    <div id="progressTrack" class="progress-track"
+                         role="progressbar" aria-label="Learning progress"
+                         aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="topicGrid" class="topic-grid" aria-label="Cloud topics">
+                    <!-- Interactive cards are created by script.js -->
+                </div>
+
+                <section id="detailPanel" class="detail-panel" aria-live="polite">
+                    <div class="empty-state">
+                        <span class="empty-icon">✦</span>
+                        <h3>Your cloud journey starts here</h3>
+                        <p>Choose any topic above to explore how cloud computing connects to Salesforce.</p>
+                    </div>
+                </section>
+
+                <div id="completionMessage" class="completion-message" hidden>
+                    <h3>🎉 Learning Journey Completed!</h3>
+                    <p>You have explored all six cloud computing topics.</p>
+                </div>
+            </section>
+
+            <section class="architecture-section">
+                <span class="eyebrow">SYSTEM DESIGN</span>
+                <h2>From Cloud Concepts to Salesforce Development</h2>
+                <div class="architecture-flow">
+                    <div class="flow-node">Cloud Computing<br><small>Core Principles</small></div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">Salesforce Platform<br><small>Cloud Application</small></div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">Lightning Web Components<br><small>Interactive UI</small></div>
+                    <span class="flow-arrow">→</span>
+                    <div class="flow-node">User Experience<br><small>Learning Dashboard</small></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <span>☁ CloudSphere 360</span>
+            <span>Built with Salesforce LWC, HTML, CSS & JavaScript</span>
+            <a href="https://github.com/Orlando-Houston/cloudsphere360-salesforce-lwc"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </footer>
+    </div>
+</body>
+</html>
