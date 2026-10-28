@@ -1,0 +1,55 @@
+
+<template>
+    <lightning-card>
+        <div class="dashboard">
+            <header class="hero">
+                <h1>CloudSphere 360</h1>
+                <p>Salesforce Cloud Architecture
+                    Interactive Learning Hub</p>
+                <p>Explore. Learn. Build.</p>
+            </header>
+
+            <div class="progress-section">
+                <h2>Learning Progress</h2>
+                <lightning-progress-bar
+                    value={progress}
+                    size="large">
+                </lightning-progress-bar>
+                <p>{progress}% Completed</p>
+            </div>
+
+            <div class="topic-grid">
+                <template for:each={topics} for:item="topic">
+                    <button
+                        key={topic.id}
+                        class="topic-card"
+                        data-id={topic.id}
+                        onclick={handleTopicClick}>
+                        <lightning-icon
+                            icon-name={topic.icon}
+                            size="medium">
+                        </lightning-icon>
+                        <h2>{topic.title}</h2>
+                        <p>{topic.subtitle}</p>
+                    </button>
+                </template>
+            </div>
+
+            <template lwc:if={selectedTopic}>
+                <section class="details">
+                    <h2>{selectedTopic.title}</h2>
+                    <p>{selectedTopic.description}</p>
+                    <h3>Salesforce Example</h3>
+                    <p>{selectedTopic.example}</p>
+                </section>
+            </template>
+
+            <div class="footer">
+                <lightning-button
+                    label="Reset Progress"
+                    onclick={handleReset}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
